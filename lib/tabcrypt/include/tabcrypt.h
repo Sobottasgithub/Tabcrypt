@@ -2,11 +2,12 @@
 #define TABCRYPT_H
 
 #include <string>
+#include <vector>
 
 namespace tabcrypt {
-    std::string encrypt(const std::string &secret, const std::string &message);
+    std::vector<unsigned char> encrypt(const std::string &secret, const std::vector<unsigned char> message);
 
-    std::string decrypt(const std::string &secret, const std::string &message);
+    std::vector<unsigned char> decrypt(const std::string &secret, const std::vector<unsigned char> message);
 }
 
 #endif
